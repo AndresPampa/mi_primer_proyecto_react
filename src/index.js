@@ -1,8 +1,41 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Usuario from './componentes/Usuario';
+// import {useState} from 'react';
+
+const App = () =>{
+
+  const [sesion, cambiarEstadoSesion] = useState(true);
+
+  return(
+    <div>
+    {/* NO es la forma adecuada trabajar con estilos en linea */}
+    {/*Segunda forma de hacerlo y mejor forma de hacerlo*/}
+    {sesion === true ? 
+    <div>
+      <Usuario /> 
+      <button onClick = {() => cambiarEstadoSesion(false)}>Cerrar sesión</button>
+    </div>
+    :
+    <div>
+      <p>No has iniciado sesión</p>
+      <button onClick={() => cambiarEstadoSesion(true)}>Iniciar sesión</button>
+    </div>}
+    </div>
+  )
+}
+
+
+//Primera forma de hacerlo
+// const verificarSesion = () =>{
+//   if(sesion === true){
+//     return JSX;
+//   } else{
+//     return <h1>No has iniciadosesión</h1>
+//   }
+// }
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,7 +44,4 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
