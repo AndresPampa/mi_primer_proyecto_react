@@ -8,6 +8,23 @@ class ContadorClass extends Component{
         this.state = {contador: 0}
     }
 
+    componentDidMount(){
+        console.log('El componente se ha montado');
+        //Aqui se puede hacer una petición a una API o a un servidor
+    }
+
+    componentDidUpdate(propiedadesAnteriores, estadoAnterior){
+        console.log('El componente se ha actualizado');
+        console.log(propiedadesAnteriores, 'propiedadesAnteriores');
+        console.log(estadoAnterior, 'estadoAnterior');
+        //Actualizacion del estado del componente
+    }
+
+    componentWillUnmount(){
+        console.log('El componente se ha desmontado');
+        //Aqui se puede hacer una limpieza de recursos o una cancelación de peticiones
+    }
+
     incrementar(cantidad){
         this.setState((estadoAnterior) =>{
             return {
