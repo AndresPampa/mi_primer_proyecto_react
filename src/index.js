@@ -4,6 +4,9 @@ import Usuario from './componentes/Usuario';
 import FormularioInicioSesion from './componentes/FormularioInicioSesion';
 import ContadorClass from './componentes/ContadorClass';
 // import {useState} from 'react';
+import ContadorFuncional from './componentes/ContadorFuncional';
+
+
 
 const App = () =>{
 
@@ -17,6 +20,7 @@ const App = () =>{
     <div>
       <Usuario /> 
       <ContadorClass cantidadAIncrementar={10} cantidadADisminuir={2} />
+      {/* <ContadorFuncional cantidadAIncrementar={10} cantidadADisminuir={2} /> */}
       <button onClick = {() => cambiarEstadoSesion(false)}>Cerrar sesión</button>
     </div>
     :
