@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import styles from './ContadorFuncional.module.css';
+import Boton from '../elementos/Boton';
 
 const ContadorFuncional = (props) =>{
     const [cuenta, cambiarCuenta] = useState(0);
@@ -9,8 +11,10 @@ const ContadorFuncional = (props) =>{
     return(
         <div>
             <h1>Contador: {cuenta}</h1>
-            <button onClick={() => incrementar(props.cantidadAIncrementar)}>Incrementar</button>
-            <button onClick={() => disminuir(props.cantidadADisminuir)}>Disminuir</button>
+            {/* <button className={styles.boton} onClick={() => incrementar(props.cantidadAIncrementar)}>Incrementar</button> */}
+            {/* <button className={styles.boton} onClick={() => disminuir(props.cantidadADisminuir)}>Disminuir</button> */}
+            <Boton negro marginRight className={styles.boton} onClick={() => incrementar(props.cantidadAIncrementar)}>Incrementar</Boton>
+            <Boton negro marginRight className={styles.boton} onClick={() => disminuir(props.cantidadADisminuir)}>Disminuir</Boton>
         </div>
     );
 }

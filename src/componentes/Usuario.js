@@ -1,6 +1,7 @@
 import React from 'react';
 // import { TituloRojo, TituloAzul } from './Titulo';
 import {Titulo} from './Titulo';
+import styled from 'styled-components';
 
 //Los Nombres de los componentes empiezan con mayusculas como las CLASES en JS(CAMELCASE)
 const Usuario = () =>{
@@ -12,15 +13,20 @@ const Usuario = () =>{
       <div>
         <Titulo />
         <Titulo usuario = "Pampa" color = "blue"/>
-        <p>Esta es una prueba de JSX papa!</p>
+        <Parrafo>Esta es una prueba de JSX papa!</Parrafo>
         {pais &&<p>Vivo en {pais}</p>}{/*Si existe pais agrega el parrafo*/}
         <p>Esta es mi lista de amigos:</p>
         <ul>
           {amigos.map((amigo, index) => <li key={index}>{amigo}</li>)}
         </ul>
-        <p>Que tengas un buen dia! Saludos!</p>
+        <Parrafo>Que tengas un buen dia! Saludos!</Parrafo>
       </div>
     );
   }
+
+const Parrafo = styled.p`
+  margin: 20px 0;
+`;
+
 
 export default Usuario;
