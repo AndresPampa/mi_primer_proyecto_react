@@ -7,6 +7,8 @@ import FormularioInicioSesion from './componentes/FormularioInicioSesion';
 import ContadorFuncional from './componentes/ContadorFuncional';
 import './index.css';
 import Boton from './elementos/Boton';
+import EjemploUseReducer from './componentes/EjemploUseReducer';
+import Blog from './componentes/Blog';
 
 
 const App = () =>{
@@ -21,7 +23,9 @@ const App = () =>{
     <div>
       <Usuario /> 
       {/* <ContadorClass cantidadAIncrementar={10} cantidadADisminuir={2} /> */}
-      <ContadorFuncional cantidadAIncrementar={10} cantidadADisminuir={2} />
+      {/* <ContadorFuncional cantidadAIncrementar={10} cantidadADisminuir={2} /> */}
+      <Blog />
+      <EjemploUseReducer />
       <Boton largo marginTop marginRight className='boton' onClick = {() => cambiarEstadoSesion(false)}>Cerrar sesión</Boton>
     </div>
     :
