@@ -4,7 +4,7 @@ import Usuario from './componentes/Usuario';
 import FormularioInicioSesion from './componentes/FormularioInicioSesion';
 // import ContadorClass from './componentes/ContadorClass';
 // import {useState} from 'react';
-import ContadorFuncional from './componentes/ContadorFuncional';
+// import ContadorFuncional from './componentes/ContadorFuncional';
 import './index.css';
 import Boton from './elementos/Boton';
 import EjemploUseReducer from './componentes/EjemploUseReducer';
